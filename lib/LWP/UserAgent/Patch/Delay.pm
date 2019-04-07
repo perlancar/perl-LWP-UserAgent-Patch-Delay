@@ -20,7 +20,12 @@ my $p_send_request = sub {
     my $ctx  = shift;
     my $orig = $ctx->{orig};
 
-    sleep $config{-between_request} // 1 if $seen++;
+    if ($seen++) {
+        my $secs = $config{-between_request} // 1;
+        log_trace "Sleeping %.1f second(s) between LWP::UserAgent request ...",
+            $secs;
+        sleep $secs;
+    }
     $ctx->{orig}->(@_);
 };
 
