@@ -45,7 +45,7 @@ sub patch_data {
 }
 
 1;
-# ABSTRACT: Sleep() between requests
+# ABSTRACT: Add sleep() between requests to slow down
 
 =head1 SYNOPSIS
 
