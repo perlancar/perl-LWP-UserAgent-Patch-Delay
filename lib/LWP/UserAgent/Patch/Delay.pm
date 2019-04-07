@@ -82,4 +82,6 @@ L<LWP::UserAgent> (or WWW::Mechanize, and so on).
 
 L<LWP::UserAgent>
 
+L<HTTP::Tiny::Patch::Delay>
+
 =cut
